@@ -1,0 +1,237 @@
+<header class="mui-bar mui-bar-nav tui-bar-nav">
+	<button class="mui-btn mui-btn-link mui-btn-nav mui-pull-left tui-nav-location" select-city>
+       <i class="mui-icon mui-icon-location"></i><i ng-bind="CityName">厦门</i>
+    </button>
+	<p class="mui-btn mui-btn-link mui-btn-nav mui-pull-right tui-nav-search-group">
+		<i class="mui-icon mui-icon-search"></i>搜索好车
+	</p>
+	<h1 class="mui-title"></h1>
+</header>
+
+<div style="margin-top: 45px; width: 100%; display: block;">
+	<!--slider-->
+	<div id="slider" class="mui-slider">
+		<div class="mui-slider-group mui-slider-loop">
+			<div class="mui-slider-item mui-slider-item-duplicate">
+				<a ui-sref="service">
+					<img src="/images/banner_service.jpg">
+				</a>
+			</div>
+
+			<div class="mui-slider-item">
+				<a ui-sref="aboutme">
+					<img src="/images/banner_about.jpg">
+				</a>
+			</div>
+			<div class="mui-slider-item">
+				<a ui-sref="service">
+					<img src="/images/banner_service.jpg">
+				</a>
+			</div>
+			<div class="mui-slider-item mui-slider-item-duplicate">
+				<a ui-sref="aboutme">
+					<img src="/images/banner_about.jpg">
+				</a>
+			</div>
+		</div>
+		<div class="mui-slider-indicator mui-text-center">
+			<div class="mui-indicator mui-active"></div>
+			<div class="mui-indicator"></div>
+		</div>
+	</div>
+	<!-- end slider -->
+
+	<div class="home-promise">
+		<span class="home-promise-list"><i class="mui-icon mui-icon-checkbox-filled"></i>海量车源 在线同享</span>
+		<span class="home-promise-list"><i class="mui-icon mui-icon-checkbox-filled"></i>四重评估检测</span>
+		<span class="home-promise-list"><i class="mui-icon mui-icon-checkbox-filled"></i>自建车商诚信体系</span>
+	</div>
+
+	<!--急售模块 start-->
+	<div class="home-jishou-title">快速买车
+		<span style="float: right;margin-right: 10px; color: #fd5736;">急售通道</span>
+	</div>
+	<!--急售模块 end-->
+
+	<!--筛选导航 start-->
+	<ul class="mui-table-view mui-grid-view mui-grid-9 tui-car-filter">
+		<li class="mui-table-view-cell mui-col-xs-12 tui-car-filter-caption">价格</li>
+		<li class="mui-table-view-cell mui-col-xs-3 tui-filter-item" data-filter-value="1">
+			<a href="" ui-sref="buy.list({PriceID:1,Value:'5万以下'})">5万以下</a>
+		</li>
+		<li class="mui-table-view-cell mui-col-xs-3 tui-filter-item" data-filter-value="2">
+			<a href="" ui-sref="buy.list({PriceID:2,Value:'5-10万'})">5-10万</a>
+		</li>
+		<li class="mui-table-view-cell mui-col-xs-3 tui-filter-item" data-filter-value="3">
+			<a href="" ui-sref="buy.list({PriceID:3,Value:'10-15万'})">10-15万</a>
+		</li>
+		<li class="mui-table-view-cell mui-col-xs-3 tui-filter-item" data-filter-value="4">
+			<a href="" ui-sref="buy.list({PriceID:4,Value:'15-20万'})">15-20万</a>
+		</li>
+		<li class="mui-table-view-cell mui-col-xs-3 tui-filter-item" data-filter-value="5">
+			<a href="" ui-sref="buy.list({PriceID:5,Value:'20-30万'})">20-30万</a>
+		</li>
+		<li class="mui-table-view-cell mui-col-xs-3 tui-filter-item" data-filter-value="6">
+			<a href="" ui-sref="buy.list({PriceID:6,Value:'30-40万'})">30-40万</a>
+		</li>
+		<li class="mui-table-view-cell mui-col-xs-3 tui-filter-item" data-filter-value="7">
+			<a href="" ui-sref="buy.list({PriceID:7,Value:'40-50万'})">40-50万</a>
+		</li>
+		<li class="mui-table-view-cell mui-col-xs-3 tui-filter-item" data-filter-value="8">
+			<a href="" ui-sref="buy.list({PriceID:8,Value:'50万以上'})">50万以上</a>
+		</li>
+		<li class="mui-table-view-cell mui-col-xs-12 tui-car-filter-caption">品牌</li>
+		<li class="mui-table-view-cell tui-filter-item mui-col-xs-3" data-filter-value="34">
+			<a href="" data-filter-value="34" ui-sref="buy.list({BrandID:34,Value:'大众'})">
+				<span class="tui-car-filter-icon tui-car-filter-icon-dazhong"></span>
+				<div class="mui-media-body">大众</div>
+			</a>
+		</li>
+		<li class="mui-table-view-cell tui-filter-item mui-col-xs-3" data-filter-value="155">
+			<a href="" ui-sref="buy.list({BrandID:155,Value:'现代'})">
+				<span class="tui-car-filter-icon tui-car-filter-icon-xiandai"></span>
+				<div class="mui-media-body">现代</div>
+			</a>
+		</li>
+		<li class="mui-table-view-cell tui-filter-item mui-col-xs-3" data-filter-value="45">
+			<a href="" ui-sref="buy.list({BrandID:45,Value:'丰田'})">
+				<span class="tui-car-filter-icon tui-car-filter-icon-fengtian"></span>
+				<div class="mui-media-body">丰田</div>
+			</a>
+		</li>
+		<li class="mui-table-view-cell tui-filter-item mui-col-xs-3" data-filter-value="8">
+			<a href="" ui-sref="buy.list({BrandID:8,Value:'宝马'})">
+				<span class="tui-car-filter-icon tui-car-filter-icon-baoma"></span>
+				<div class="mui-media-body">宝马</div>
+			</a>
+		</li>
+		<li class="mui-table-view-cell tui-filter-item mui-col-xs-3" data-filter-value="22">
+			<a href="" ui-sref="buy.list({BrandID:22,Value:'别克'})">
+				<span class="tui-car-filter-icon tui-car-filter-icon-bieke"></span>
+				<div class="mui-media-body">别克</div>
+			</a>
+		</li>
+		<li class="mui-table-view-cell tui-filter-item mui-col-xs-3" data-filter-value="5">
+			<a href="" ui-sref="buy.list({BrandID:5,Value:'奥迪'})">
+				<span class="tui-car-filter-icon tui-car-filter-icon-aodi"></span>
+				<div class="mui-media-body">奥迪</div>
+			</a>
+		</li>
+		<li class="mui-table-view-cell tui-filter-item mui-col-xs-3" data-filter-value="17">
+			<a href="" ui-sref="buy.list({BrandID:17,Value:'奔驰'})">
+				<span class="tui-car-filter-icon tui-car-filter-icon-benchi"></span>
+				<div class="mui-media-body">奔驰</div>
+			</a>
+		</li>
+		<li class="mui-table-view-cell tui-filter-item mui-col-xs-3" data-filter-value="126">
+			<a href="" ui-sref="buy.list({BrandID:126,Value:'日产'})">
+				<span class="tui-car-filter-icon tui-car-filter-icon-richan"></span>
+				<div class="mui-media-body">日产</div>
+			</a>
+		</li>
+		<li class="mui-table-view-cell tui-filter-item mui-col-xs-3" data-filter-value="48">
+			<a href="" ui-sref="buy.list({BrandID:48,Value:'福特'})">
+				<span class="tui-car-filter-icon tui-car-filter-icon-fute"></span>
+				<div class="mui-media-body">福特</div>
+			</a>
+		</li>
+		<li class="mui-table-view-cell tui-filter-item mui-col-xs-3" data-filter-value="19">
+			<a href="" ui-sref="buy.list({BrandID:19,Value:'本田'})">
+				<span class="tui-car-filter-icon tui-car-filter-icon-bentian"></span>
+				<div class="mui-media-body">本田</div>
+			</a>
+		</li>
+		<li class="mui-table-view-cell tui-filter-item mui-col-xs-3" data-filter-value="156">
+			<a href="" ui-sref="buy.list({BrandID:156,Value:'雪弗兰'})">
+				<span class="tui-car-filter-icon tui-car-filter-icon-xuefulan"></span>
+				<div class="mui-media-body">雪弗兰</div>
+			</a>
+		</li>
+		<li class="mui-table-view-cell mui-media tui-filter-item mui-col-xs-3">
+			<a href="" ui-sref="buy.list({More:0})">
+				<span class="tui-car-filter-icon tui-car-filter-icon-more"></span>
+				<div class="mui-media-body">更多品牌</div>
+			</a>
+		</li>
+		<li class="mui-table-view-cell mui-col-xs-12 tui-car-filter-caption">
+			车型
+		</li>
+		<li class="mui-table-view-cell home-col-20 tui-filter-item" data-filter-value="1" data-filter-name="Style">
+			<a href="" ui-sref="buy.list({Style:1,Value:'轿车'})">轿车</a>
+		</li>
+		<li class="mui-table-view-cell home-col-20 tui-filter-item" data-filter-value="2" data-filter-name="Style">
+			<a href="" ui-sref="buy.list({Style:2,Value:'SUV'})">SUV</a>
+		</li>
+		<li class="mui-table-view-cell home-col-20 tui-filter-item" data-filter-value="3" data-filter-name="Style">
+			<a href="" ui-sref="buy.list({Style:3,Value:'MPV'})">MPV</a>
+		</li>
+		<li class="mui-table-view-cell home-col-20 tui-filter-item" data-filter-value="4" data-filter-name="Style">
+			<a href="" ui-sref="buy.list({Style:4,Value:'跑车'})">跑车</a>
+		</li>
+		<li class="mui-table-view-cell home-col-20 tui-filter-item" data-filter-value="5" data-filter-name="Style">
+			<a href="" ui-sref="buy.list({Style:5,Value:'其它'})">其它</a>
+		</li>
+		<li class="mui-table-view-cell mui-col-xs-12 tui-filter-item">
+			<a ui-sref="carlist" class="tui-mod-more">查看全部车辆 &gt;&gt; </a>
+		</li>
+	</ul>
+	<!--筛选导航 end-->
+
+	<!--猜你喜欢 start-->
+	<h5 class="mui-content-padded tui-carlist-title">猜你喜欢</h5>
+
+	<div class="w" id="toolbar" ng-init="active_num=0">
+		<div class="home-nav-tab">
+			<div class="tui-slider-indicator tui-segmented-control tui-segmented-control-inverted">
+				<a class="tui-control-item" ng-class="{active:active_num==0}" ng-click="active_num=0;LoadLoveData(0);">
+		           最新上架
+		        </a>
+				<a class="tui-control-item" ng-class="{active:active_num==1}" ng-click="active_num=1;LoadLoveData(1);">
+		           急售降价
+		        </a>
+				<a class="tui-control-item" ng-class="{active:active_num==2}" ng-click="active_num=2;LoadLoveData(2);">
+		                       准新车
+		        </a>
+				<a class="tui-control-item" ng-class="{active:active_num==3}" ng-click="active_num=3;LoadLoveData(4);">
+		                      SUV
+		        </a>
+			</div>
+		</div>
+
+		<div class="w">
+			<div class="ctx-loading" ng-if="!LoveData.LoveList[0]&&isload">
+				<span ng-bind="loadmsg">车辆加载中，请稍后...</span>
+			</div>
+			<ul class="mui-table-view mui-grid-view">
+				<li class="mui-table-view-cell mui-media mui-col-xs-6" ng-repeat="obj in LoveData.LoveList">
+					<a ui-sref="buy.info({CarNo:obj.CarNo})">
+						<div ng-class="{true:'tui-car-cover tui-order-trade',false:'tui-car-cover'}[obj.CarFlag==1]" data-city="{{obj.CityName}}" ng-switch="obj.AppraiserFlag">
+							<img class="mui-media-object" ng-src="{{obj.HomePicID||cover}}">
+							<span class="tui-report-count" ng-if="obj.BuyIntentionCount>0"><i ng-bind="obj.BuyIntentionCount"></i>人评估</span>
+							<span class="tui-ctxrenzhen-3" ng-switch-when="3"></span>
+							<span class="tui-ctxrenzhen-2" ng-switch-when="2"></span>
+							<span class="tui-ctxrenzhen-1" ng-switch-when="1"></span>
+						</div>
+						<div class="home-car-title" ng-bind="obj.SpecName"></div>
+						<div class="home-car-meta">
+							<i ng-bind="obj.Buyyear|DateTimeFormat:'yyyy年MM月'"></i>上牌| 行驶<i ng-bind="obj.Mileage"></i>万公里
+						</div>
+						<div class="home-car-price">
+							<div class="home-car-sale tui-font-orange">
+								<span ng-if="obj.CarFlag!=1"><i ng-bind="(obj.Price/10000|currency:'')"></i><small>万</small></span>
+								<span ng-if="obj.CarFlag==1"><i ng-if="obj.CarFlag==1">交易中...</i></span>
+							</div>
+							<div class="tui-tag-reduce" ng-if="WholesalePrice&&obj.CarFlag!=1">同行价<b ng-if="obj.WholesalePrice!=0"><i ng-bind="obj.WholesalePrice/10000|currency:'￥'"></i><small>万</small></b><b ng-if="obj.WholesalePrice==0">面议</b></div>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-col-xs-12 tui-filter-item" style="border-top:1px solid #eee">
+					<a ui-sref="buy.list" class="tui-mod-more">查看全部车辆 &gt;&gt; </a>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<!--猜你喜欢 end-->
+
+</div>

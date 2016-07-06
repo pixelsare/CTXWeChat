@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, width=device-width">
+  <!--强制双核浏览器切换到webkit内核-->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+  <title>车同享二手车交易平台</title>
+  <!--设置基地址，用于应对html5路径模式。如果没有部署在根路径下，请修改为相应的路径-->
+  <base href="/"/>
+  
+
+  
+  <link rel="stylesheet" href="main-ab852261.css">
+</head>
+<body ng-app="app">
+<app-layout></app-layout>
+<script src="../libjs/mui/mui.min.js" charset="utf-8"></script>
+<script src="scripts/vendor-96cfd4e2.js"></script>
+
+<script src="scripts/main-9edaa738.js"></script>
+<script src="scripts/templates-d5bd2675.js"></script>
+<script>
+	//格式话时间日期
+Date.prototype.Format = function(fmt) {
+	var o = {
+		"M+": this.getMonth() + 1, //月份
+		"d+": this.getDate(), //日
+		"h+": this.getHours(), //小时
+		"m+": this.getMinutes(), //分
+		"s+": this.getSeconds(), //秒
+		"q+": Math.floor((this.getMonth() + 3) / 3), //季度
+		"S": this.getMilliseconds() //毫秒
+	};
+	if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+	for (var k in o)
+		if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+	return fmt;
+}
+</script>
+</body>
+</html>

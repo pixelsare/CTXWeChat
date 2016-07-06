@@ -1,0 +1,27 @@
+/*
+*我要买车
+*/
+
+.tui-sell-banner img,
+.tui-sell-pro img {
+    width: 100%;
+    height: auto;
+}
+.tui-sell-count {
+    line-height: 38px;
+    background: #FFFFFF;
+    margin-top: 0;
+    padding: 0 15px;
+}
+.tui-sell-bar {
+    padding: 0 10px;
+    text-align: center;
+}
+.mui-table-view.mui-grid-view.tui-sell-descr .mui-table-view-cell {
+    padding: 10px;
+}
+.mui-table-view.mui-grid-view.tui-sell-descr .mui-table-view-cell .mui-media-body {
+    height: 35px;
+    margin: 10px 0;
+    line-height: 24px;
+}

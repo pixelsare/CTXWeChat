@@ -1,0 +1,248 @@
+.tui-filter {
+    top: 44px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background-color: #fcfcfc;
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+}
+.tui-filter-nav {
+    display: -webkit-box;
+    display: -ms-box;
+    display: box;
+    background-color: #fff;
+    z-index: 100;
+}
+.tui-filter-nav .tui-nav-item {
+    display: block;
+    -webkit-box-flex: 1;
+    -ms-box-flex: 1;
+    box-flex: 1;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 33.333%;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    overflow: hidden;
+    color: #333333;
+    position: relative;
+    z-index: 100;
+}
+.tui-filter-nav .tui-nav-item.active,
+.tui-filter-nav .tui-nav-item.active.touch,
+.tui-filter-nav .tui-nav-item.select,
+.tui-filter-nav .tui-nav-item.select.touch {
+    background-color: transparent;
+    border-bottom: 2px solid #ff6a00;
+    color: #ff6a00;
+}
+.tui-filter-nav .tui-nav-item::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    width: 0;
+    height: 0;
+    border: 4px solid transparent;
+    border-top-color: #999;
+    margin-top: -2px;
+}
+.tui-filter-nav .tui-nav-item.active::after {
+    border-top-color: transparent;
+    border-bottom-color: #ff6a00;
+    margin-top: -5px;
+}
+.tui-filter .tui-filter-type {
+    display: none;
+}
+.tui-filter .tui-filter-type.active {
+    display: block;
+}
+.mui-grid-view.mui-grid-9.tui-filter-list {
+    background-color: #FFFFFF !important;
+}
+.tui-filter-btnone {
+    border-top: none !important;
+}
+.tui-filter-type .tui-filter-list a {
+    display: block;
+    position: relative;
+    color: #333;
+    font-size: 13px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0 !important;
+}
+.tui-filter-type .tui-filter-list a .mui-icon {
+    font-size: 12px;
+    color: #333;
+}
+.tui-filter-list .mui-table-view-cell.tui-filter-item,
+.tui-filter-list .mui-table-view-cell.tui-filter-item-multiple {
+    padding: 10px 0;
+}
+.tui-filter-list .mui-table-view-cell.tui-filter-item-placeholder {
+    padding: 10px 0;
+}
+.tui-filter-type .mui-table-view-cell.tui-car-filter-caption {
+    padding-left: 15px;
+}
+.tui-filter-type .mui-table-view-cell.tui-filter-item.active,
+.tui-filter-type .mui-table-view-cell.tui-filter-item-multiple.active {
+    background: #f4f4f4;
+    position: relative;
+}
+.tui-filter-type .mui-table-view-cell.tui-filter-item.active .iconfont {
+    color: #ff6a00;
+}
+.tui-filter-more.tui-filter-type .mui-table-view-cell.tui-filter-item.active::after,
+.tui-filter-more.tui-filter-type .mui-table-view-cell.tui-filter-item-multiple.active::after {
+    font-family: Muiicons;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    display: block;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    content: "\e442";
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    left: initial;
+    background: #ff6a00;
+    border-radius: 50%;
+    color: #ff6a00;
+    -webkit-transform: none;
+    transform: none;
+}
+.mui-table-view-cell:after {
+    /* position: absolute; */
+    /* right: 0; */
+    /* bottom: 0; */
+    /* left: 15px; */
+    /* height: 1px; */
+    /* content: ''; */
+    /* -webkit-transform: scaleY(.5); */
+    /* transform: scaleY(.5); */
+    /* background-color: #c8c7cc; */
+}
+.tui-filter-opt {
+    display: -moz-box;
+    /* Firefox */
+    display: -webkit-box;
+    /* Safari and Chrome */
+    display: box;
+    width: 100%;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+}
+.tui-filter-opt .tui-btn-default {
+    color: #fff;
+    background-color: #b5b5b5;
+    border: 0;
+    -webkit-box-flex: 3.0;
+    box-flex: 3.0;
+    display: -moz-box;
+    /* Firefox */
+    display: -webkit-box;
+    /* Safari and Chrome */
+    display: box;
+    height: 42px;
+    text-align: center;
+}
+.tui-filter-opt .tui-btn-primary {
+    color: #fff;
+    border: 0;
+    -webkit-box-flex: 1.0;
+    box-flex: 1.0;
+    display: -moz-box;
+    /* Firefox */
+    display: -webkit-box;
+    /* Safari and Chrome */
+    display: box;
+    text-align: center;
+    text-align: -webkit-center;
+    text-align: -moz-center;
+}
+.tui-filter-type .mui-indexed-list-bar {
+    width: 23px;
+    background-color: transparent;
+    position: absolute;
+    height: 100%;
+    z-index: 10;
+    right: 0;
+    -webkit-transition: 0.2s;
+    color: #4c4c4c;
+}
+.tui-filter-result {
+    line-height: 32px;
+    padding-left: 15px;
+    border-bottom: 1px solid #eeeeee;
+    display: none;
+}
+.tui-filter-result.active {
+    display: -webkit-box;
+}
+.tui-filter-result label {
+    -webkit-box-flex: 1;
+}
+.tui-filter-result p {
+    -webkit-box-flex: 3;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+    white-space: nowrap;
+}
+.tui-filter-result-btn {
+    -webkit-box-flex: 1;
+    border-left: 1px solid #eeeeee;
+    text-align: center;
+    min-width: 60px;
+    width: 60px;
+    color: #ff6a00;
+}
+.dui-col-20 {
+    width: 20%;
+}
+//.page-list{
+//  display: block;
+//  position: relative;
+//  float: left;
+//}
+//.page-list .pagination {
+//  float: left;
+//}
+//.page-list .pagination span {
+//  cursor: pointer;
+//}
+//.page-list .pagination .separate span {
+//  cursor: default;
+//  border-top: none;
+//  border-bottom: none;
+//}
+//.page-list .pagination .separate span:hover {
+//  background: none;
+//}
+//.page-list .page-total {
+//  float: left;
+//  margin: 25px 20px;
+//}
+//.page-list .page-total input,
+//.page-list .page-total select {
+//  height: 26px;
+//  border: 1px solid #ddd;
+//}
+//.page-list .page-total input {
+//  width: 40px;
+//  padding-left: 3px;
+//}
+//.page-list .page-total select {
+//  width: 50px;
+//}

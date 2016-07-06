@@ -1,0 +1,413 @@
+@charset "utf-8";
+
+@import "variables";
+
+// 这里放不属于bootstrap，但是具有通用价值的样式
+body{margin: 0px; padding: 0px;}
+
+i,
+cite,
+em,
+var,
+address,
+dfn {
+    font-style: inherit;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+/*********
+ * 车辆列表
+ * *******/
+
+.home-car-title {
+    color: #333;
+    font-weight: 500;
+    line-height: 22px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 2px;
+    overflow: hidden;
+    font-size: 14px;
+}
+.home-car-meta {
+    color: #999;
+    font-size: 12px;
+    line-height: 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: left;
+}
+.home-car-price {
+    display: -webkit-flex;
+    justify-content: flex-start;
+    align-items: center;
+    display: -webkit-box;
+    -webkit-box-align: center;
+}
+.home-car-sale {
+    color: #ff9600;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 20px;
+    text-align: left;
+    -webkit-flex: 1 1 45%;
+    -webkit-box-flex: 1;
+}
+.home-car-detection {
+    -webkit-flex: 0 0 15px;
+    -webkit-box-flex: 1;
+    background: #95d658;
+    height: 15px;
+    border-radius: 2px;
+    color: #FFFFFF;
+    font-size: 10px;
+}
+.tui-tag-reduce {
+    background-color: #ff9600;
+    color: #fff;
+    font-size: 10px;
+    line-height: 14px;
+    padding: 1px;
+    margin: 0;
+    display: inline-block;
+    text-align: right;
+}
+.tui-tag-reduce b {
+    display: inline-block;
+    background-color: #fff;
+    color: #ff9600;
+    font-weight: 500;
+    line-height: 14px;
+    padding: 1px;
+    margin-left: 1px;
+}
+.mui-content-padded.mui-hotline-telephone {
+    color: #999999;
+    text-align: center;
+}
+.mui-grid-9.tui-search-keyword {
+    background: #FFFFFF;
+}
+.tui-car-cover {
+    position: relative;
+}
+@media (min-width: 300px){
+    .tui-car-cover {
+        position: relative;
+        width: 100%;
+        height: 90px;
+        overflow: hidden;
+    }  
+}
+@media (min-width: 370px){
+    .tui-car-cover {
+        position: relative;
+        width: 100%;
+        height: 90px;
+        overflow: hidden;
+    }  
+}
+@media (min-width: 410px){
+    .tui-car-cover {
+        position: relative;
+        width: 100%;
+        height: 120px;
+        overflow: hidden;
+    }  
+}
+.tui-car-cover::after {
+    content: attr(data-city);
+    display: inline-block;
+    width: auto;
+    background: #000000;
+    opacity: 0.8;
+    position: absolute;
+    left: 2px;
+    bottom: 2px;
+    font-size: 10px;
+    border-radius: 4px;
+    color: #ffffff;
+    padding: 0 10px;
+}
+.tui-report-count {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 10px;
+    color: #FFFFFF;
+    background: #fa6464;
+    padding: 0 5px;
+}
+.tui-ctxrenzhen-3 {
+    background: url("../images/renzheng_icon_3.png") no-repeat center;
+    background-size: cover;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 33px;
+    height: 29px;
+}
+.tui-ctxrenzhen-2 {
+    background: url("../images/renzheng_icon_2.png") no-repeat center;
+    background-size: cover;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 33px;
+    height: 29px;
+}
+.tui-ctxrenzhen-1 {
+    background: url("../images/renzheng_icon_1.png") no-repeat center;
+    background-size: cover;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 33px;
+    height: 29px;
+}
+
+.tui-ctxrenzhen-big-3 {
+    background: url("../images/renzheng_icon_3.png") no-repeat center;
+    background-size: cover;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 55px;
+    height: 50px;
+}
+.tui-ctxrenzhen-big-2 {
+    background: url("../images/renzheng_icon_2.png") no-repeat center;
+    background-size: cover;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 55px;
+    height: 50px;
+}
+.tui-ctxrenzhen-big-1 {
+    background: url("../images/renzheng_icon_1.png") no-repeat center;
+    background-size: cover;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 55px;
+    height: 50px;
+}
+
+
+.ctx-loading{
+    width: 100%; text-align: center; background-color: #fff; padding-top: 50px; padding-bottom: 50px; display: table;
+}
+.ctx-loading .loading-txt{
+    position: absolute; top: 45%; width: 100%; text-align: center;
+}
+
+
+.tui-slider-indicator {
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #dedede;
+    color: #4c4c4c;
+    background: #FFFFFF;
+}
+.tui-slider-indicator.tui-segmented-control {
+    position: relative;
+    bottom: auto;
+}
+.tui-slider-indicator .tui-indicator {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: 1px 6px;
+    cursor: pointer;
+    border-radius: 50%;
+    background: #fff;
+    -webkit-box-shadow: 0 0 1px 1px rgba(130, 130, 130, .7);
+    box-shadow: 0 0 1px 1px rgba(130, 130, 130, .7);
+}
+.tui-segmented-control .tui-control-item {
+    line-height: 38px;
+    display: table-cell;
+    overflow: hidden;
+    width: 1%;
+    -webkit-transition: background-color .1s linear;
+    transition: background-color .1s linear;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #4c4c4c;
+    border-color: #dedede;
+    border-left: 1px solid #dedede;
+}
+.tui-segmented-control .tui-control-item:first-child {
+    border-left-width: 0;
+}
+.tui-segmented-control .tui-control-item.active {
+    color: #ff6a00;
+    background-color: #fff;
+    border-bottom: 2px solid #ff6a00;
+}
+.tui-admin-offbtn{
+    padding: 10px;
+}
+.tui-admin-offbtn .mui-btn-block{
+    padding: 10px 0;
+}
+
+
+/*********
+ * 按钮
+ * *******/
+
+.tui-btn {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    outline: 1px solid rgba(0, 0, 0, .02);
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    width: 100%;
+    background-color: #ff6a00;
+    border: 1px solid#ff6a00;
+    color: #fff;
+    height: 42px;
+    font-size: 16px;
+    line-height: 42px;
+    border-radius: 0;
+}
+.tui-btn-default {
+    height: 34px;
+    background-color: #e6f5de;
+    color: #5b2;
+    font-size: 14px;
+    line-height: 34px;
+    padding: 0 12px;
+}
+.tui-btn-primary {
+    width: 100%;
+    background-color: #ff6a00;
+    color: #fff;
+}
+.tui-btn-orange {
+    color: #fff;
+    border: 1px solid #ff6a00;
+    background-color: #ff6a00;
+}
+
+
+/*********
+ * 字体颜色
+ * *******/
+
+.tui-font-orange {
+    color: #ff9600;
+}
+.tui-font-green {
+    color: #41a934;
+}
+.tui-font-red {
+    color: #cc2b53;
+}
+.tui-font-white {
+    color: #fff;
+}
+.tui-font-blue {
+    color: #0091ff;
+}
+
+/*********
+ * 头部导航
+ * *******/
+
+.mui-bar.mui-bar-nav.tui-bar-nav {
+    background: #ffffff;
+    color: #4c4c4c;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.mui-bar.mui-bar-nav.tui-bar-nav .tui-nav-location {
+    color: #4c4c4c;
+}
+
+/*********
+ * 导航图标
+ * *******/
+
+.tui-nav-icon {
+    display: block;
+    background: url(../images/icon_new_v1.png) no-repeat;
+    background-size: 200px auto;
+    width: 40px;
+    height: 50px;
+    margin: 0 auto;
+}
+.tui-nav-icon-buy {
+    background-position: 0 -25px;
+}
+.tui-nav-icon-sell {
+    background-position: -46px -25px;
+}
+.tui-nav-icon-server {
+    background-position: -92px -25px;
+}
+.mui-btn-nav.tui-nav-search-group {
+    background: #ebebeb;
+    opacity: 0.6;
+    height: 30px;
+    line-height: 30px !important;
+    width: 60%;
+    margin-top: 8px !important;
+    color: #999999;
+    font-size: 14px;
+    position: relative;
+}
+.mui-btn-nav.tui-nav-search-group,
+.mui-btn-nav.tui-nav-search-cancel {
+    color: #999999;
+}
+a.mui-btn-nav.tui-nav-search-group:link,
+a.mui-btn-nav.tui-nav-search-group:visited,
+a.mui-btn-nav.tui-nav-search-group:hover,
+a.mui-btn-nav.tui-nav-search-group:active,
+.mui-btn-nav.tui-nav-search-cancel:active {
+    color: #FFFFFF
+}
+.mui-btn-nav.tui-nav-search-bar {
+    background: #ebebeb;
+    opacity: 0.6;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 7px !important;
+    color: #999999;
+    font-size: 14px;
+    position: relative;
+    width: 85%;
+}
+.mui-btn-nav.tui-nav-search-bar .mui-icon-search {
+    position: absolute;
+    right: 10px;
+    color: #FFFFFF;
+    top: 4px;
+}
+.mui-btn-nav.tui-nav-search-bar .tui-nav-search {
+    border: none;
+    background-color: transparent;
+    height: 30px;
+    line-height: 30px;
+}
+.mui-btn-link.tui-nav-search-cancel {
+    width: 10%;
+    color: #999999;
+}

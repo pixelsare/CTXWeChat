@@ -1,0 +1,62 @@
+<header class="mui-bar mui-bar-nav tui-bar-nav">
+	<button class="mui-btn mui-btn-link mui-btn-nav mui-pull-left tui-nav-location" select-city>
+        <i class="mui-icon mui-icon-location"></i><i ng-bind="CityName">全国</i>
+    </button>
+	<p class="mui-btn mui-btn-link mui-btn-nav mui-pull-right tui-nav-search-group" ui-sref="searchcar">
+		<i class="mui-icon mui-icon-search"></i>找到<span ng-bind="CarTotal" style="color: #FE5621"></span>辆好车
+	</p>
+</header>
+
+<div class="tui-filter" id="tui-filter">
+	<nav class="tui-filter-nav" style="border-bottom: 1px solid #eee">
+		<a data-for="orderFilter" href="javascript:void(0);" class="tui-nav-item">排  序</a>
+		<a data-for="brandFilter" href="javascript:void(0);" class="tui-nav-item">品  牌</a>
+		<a data-for="moreFilter" href="javascript:void(0);" class="tui-nav-item">更  多</a>
+	</nav>
+
+	<div class="tui-filter-type" data-role="orderFilter" data-url-key="order_index">
+		<ul class="mui-table-view mui-grid-view mui-grid-9 tui-filter-list tui-filter-btnone">
+			<li class="mui-table-view-cell mui-col-xs-3 tui-filter-item active" data-filter-value="0" data-filter-name="SortUpdate"><a href="" ui-sref="carlist">默 认</a></li>
+			<li class="mui-table-view-cell mui-col-xs-3 tui-filter-item" data-filter-value="1" data-filter-name="SortPrice"><a href="javascript:void(0);">价 格<i ng-class="{'iconfont icon-down':filter.Sort!=1,'iconfont icon-up':filter.Sort==1}"></i></a></li>
+			<li class="mui-table-view-cell mui-col-xs-3 tui-filter-item" data-filter-value="2" data-filter-name="SortAge"><a href="javascript:void(0);">车 龄<i ng-class="{'iconfont icon-down':filter.Sort!=2,'iconfont icon-up':filter.Sort==2}"></i></a></li>
+			<li class="mui-table-view-cell mui-col-xs-3 tui-filter-item" data-filter-value="3" data-filter-name="SortMileage"><a href="javascript:void(0);">里 程<i ng-class="{'iconfont icon-down':filter.Sort!=3,'iconfont icon-up':filter.Sort==3}"></i></a></li>
+		</ul>
+	</div>
+</div>
+
+<div style="margin-top: 86px; width: 100%; display: block;">
+
+	<div class="ctx-loading" ng-if="!CarList[0]">
+		<span ng-bind="loadmsg">车辆加载中，请稍后...</span>
+	</div>
+
+	<!--start car list-->
+	<ul id="scrolltop" class="mui-table-view mui-grid-view mui-full-screen">
+		<li class="mui-table-view-cell mui-media mui-col-xs-6" ng-repeat="obj in CarList">
+			<a ui-sref="buy.info({CarNo:obj.CarNo})">
+				<div ng-class="{true:'tui-car-cover tui-order-trade',false:'tui-car-cover'}[obj.CarFlag==1]" data-city="{{obj.CityName}}" ng-switch="obj.AppraiserFlag">
+					<img class="mui-media-object" ng-src="{{obj.HomePicID||cover}}">
+					<span class="tui-report-count" ng-if="obj.BuyIntentionCount>0"><i ng-bind="obj.BuyIntentionCount"></i>人评估</span>
+					<span class="tui-ctxrenzhen-3" ng-switch-when="3"></span>
+					<span class="tui-ctxrenzhen-2" ng-switch-when="2"></span>
+					<span class="tui-ctxrenzhen-1" ng-switch-when="1"></span>
+				</div>
+				<div class="home-car-title" ng-bind="obj.SpecName"></div>
+				<div class="home-car-meta">
+					<i ng-bind="obj.Buyyear|DateTimeFormat:'yyyy年MM月'"></i>上牌| 行驶<i ng-bind="obj.Mileage"></i>万公里
+				</div>
+				<div class="home-car-price">
+					<div class="home-car-sale tui-font-orange">
+						<span ng-if="obj.CarFlag!=1"><i ng-bind="(obj.Price/10000|currency:'')"></i><small>万</small></span>
+						<span ng-if="obj.CarFlag==1"><i ng-if="obj.CarFlag==1">交易中...</i></span>
+					</div>
+					<div class="tui-tag-reduce" ng-if="WholesalePrice&&obj.CarFlag!=1">同行价<b ng-if="obj.WholesalePrice!=0"><i ng-bind="obj.WholesalePrice/10000|currency:'￥'"></i><small>万</small></b><b ng-if="obj.WholesalePrice==0">面议</b></div>
+				</div>
+			</a>
+		</li>
+	</ul>
+
+	<tm-pagination conf="paginationConf"></tm-pagination>
+	<pager></pager>
+	<!--end car list-->
+</div>

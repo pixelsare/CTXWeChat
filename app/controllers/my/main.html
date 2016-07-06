@@ -1,0 +1,68 @@
+<header class="mui-bar mui-bar-nav tui-bar-nav">
+	<h1 class="mui-title">个人中心</h1>
+</header>
+
+<div style="margin-top: 45px; width: 100%; display: block;">
+	<section class="tui-admin-banner">
+		<p><span class="tui-admin-header" ng-style="HeadStyle"></span></p>
+		<button ng-if="!user" type="button" class="mui-btn tui-btn-orange" tui-login>点击登录</button>
+		<strong ng-if="user" class="tui-user-name" style="color: #fff;" ng-bind="user.Contact"></strong>
+	</section>
+	<ul class="mui-table-view">
+		<li class="mui-table-view-cell" ui-sref="buyorder">
+			<a class="mui-navigate-right">
+				<i class="tui-admin-icon tui-admin-buy"></i> 买车订单
+			</a>
+		</li>
+		<li class="mui-table-view-cell" ui-sref="sellorder">
+			<a class="mui-navigate-right">
+				<i class="tui-admin-icon tui-admin-sell"></i> 卖车订单
+			</a>
+		</li>
+		<li class="mui-table-view-cell" ui-sref="cargather">
+			<a class="mui-navigate-right">
+				<i class="tui-admin-icon tui-admin-wodecheyuan"></i> 我的车源
+			</a>
+		</li>
+		<li class="mui-table-view-cell" ng-if="user.AppraiserCode" ui-sref="queren_car_list">
+			<a class="mui-navigate-right">
+				<i class="tui-admin-icon tui-admin-wodecheyuan"></i> 待确认车源
+			</a>
+		</li>
+		<li class="mui-table-view-cell" ui-sref="u_eval_list">
+			<a class="mui-navigate-right">
+				<i class="tui-admin-icon tui-admin-pinggudingdan"></i> 委托评估
+			</a>
+		</li>
+		<li class="mui-table-view-cell" ui-sref="discount">
+			<a class="mui-navigate-right">
+				<i class="tui-admin-icon tui-admin-youhuiquan"></i> 我的优惠券
+			</a>
+		</li>
+		<li class="mui-table-view-cell" ui-sref="worrycar">
+			<a class="mui-navigate-right">
+				<i class="tui-admin-icon tui-admin-youhuiquan"></i> 急售通道
+			</a>
+		</li>
+		<li class="mui-table-view-cell" ui-sref="carcount">
+			<a class="mui-navigate-right">
+				<i class="tui-admin-icon tui-admin-youhuiquan"></i> 车源统计
+			</a>
+		</li>
+		<li class="mui-table-view-cell" ui-sref="account">
+			<a class="mui-navigate-right">
+				<i class="tui-admin-icon tui-admin-zhanghaozhongxin"></i> 账号中心
+			</a>
+		</li>
+
+		<li class="mui-table-view-cell">
+			<a class="mui-navigate-right" href="/service.html">
+				<i class="tui-admin-icon tui-admin-youhuiquan"></i> 服务保障
+			</a>
+		</li>
+	</ul>
+	<div class="tui-admin-offbtn" ng-if="user">
+		<button type="button" class="mui-btn mui-btn-block mui-btn-red" ng-click="LOGINOUT()">注销</button>
+	</div>
+
+</div>

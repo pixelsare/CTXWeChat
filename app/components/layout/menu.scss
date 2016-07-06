@@ -1,0 +1,59 @@
+layout-menu {
+    width: 100%;
+}
+
+.ctx-bar{
+    width:100%;
+    position: fixed;
+    display: table;
+    height: 45px;
+    bottom: 0px;
+    background-color: #f7f7f7;
+    border-top:solid 1px #D2E0E6;
+    z-index: 10;
+    right: 0;
+    left: 0;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.85);
+    backface-visibility: hidden;
+}
+
+.ctx-bar .ctx-tab-item {
+    display: table-cell;
+    overflow: hidden;
+    width: 1%;
+    height: 45px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #929292;
+}
+
+.ctx-bar .ctx-tab-item .mui-icon ~ .mui-tab-label {
+    font-size: 11px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ctx-bar .ctx-tab-item .iconfont{
+    top: 3px;
+    font-size: 18px;
+    line-height: 1;
+    text-decoration: none;
+//  color: #ff6a00;
+}
+
+.ctx-bar .ctx-tab-item .iconfont ~ .mui-tab-label {
+    font-size: 11px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none;
+}
+.ctx-bar .tui-active .iconfont{
+    color: #ff6a00;
+}
+.ctx-bar .tui-active .mui-tab-label {
+    color: #ff6a00;
+}

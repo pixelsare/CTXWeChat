@@ -1,0 +1,18 @@
+<nav class="ctx-bar">
+	<a id="defaultTab" ng-class="{true:'ctx-tab-item tui-active',false:'ctx-tab-item'}[ACTION=='home']" href="/">
+		<span class="iconfont icon-shouyeshouye"></span>
+		<span class="mui-tab-label">首页</span>
+	</a>
+	<a ng-class="{true:'ctx-tab-item tui-active',false:'ctx-tab-item'}[ACTION=='buy']" ui-sref="buy.list">
+		<span class="iconfont icon-ershoucheqiugou"></span>
+		<span class="mui-tab-label">买车</span>
+	</a>
+	<a ng-class="{true:'ctx-tab-item tui-active',false:'ctx-tab-item'}[ACTION=='sell']" ui-sref="sell">
+		<span class="iconfont icon-maiche"></span>
+		<span class="mui-tab-label">卖车</span>
+	</a>
+	<a ng-class="{true:'ctx-tab-item tui-active',false:'ctx-tab-item'}[ACTION=='my']" ui-sref="my.main">
+		<span class="iconfont icon-gerenzhongxin"></span>
+		<span class="mui-tab-label">我的</span>
+	</a>
+</nav>

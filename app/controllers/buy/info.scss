@@ -1,0 +1,537 @@
+#infoimg .mui-slider-indicator {
+    width: auto;
+    right: 10px;
+    color: #fff;
+}
+.mui-slider-indicator .mui-number span {
+    color: #fff;
+}
+.dui-flow-wrap {
+    height: 25px;
+    overflow: hidden;
+    padding: 0;
+}
+.dui-num-icon {
+    border: 1px solid #ff8f3f;
+    color: #ff8f3f;
+    height: 25px;
+    width: 26px;
+    border-radius: 13px;
+    text-align: center;
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.dui-num-jiantou {
+    width: 100%;
+    color: #ff8f3f;
+    padding-left: 11px;
+}
+.dui-rz-list {
+    float: left;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    background-color: #fff;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+.dui-rz-list p {
+    font-size: 10px;
+}
+.dui-rz-list:after {}
+.dui-rz-list:last-child {
+    border-right: none;
+}
+@charset "utf-8";
+/*
+ * @author:dekent
+ * @version:1.0.0
+ * @date:2015-12-30
+ */
+/*通用样式*/
+.mui-bar .mui-btn-link {
+    color: #333;
+}
+.dui-bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #FFF;
+    border-top: 1px solid #dedede;
+}
+.dui-bottom-nav .dui-b-nav-h {
+    line-height: 45px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 16px;
+    float: left;
+    border-radius: 0;
+    border: 0;
+}
+.dui-bottom-nav .dui-b-nav-bg {
+    background-color: #ff6a00;
+    color: #fff;
+}
+.w {
+    width: 100%;
+}
+.h35 {
+    height: 35px;
+}
+.h65 {
+    height: 65px !important;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+/*粗体*/
+.dui-strong {
+    font-weight: bold;
+}
+.dui-mt10 {
+    margin-top: 10px;
+}
+.dui-p5 {
+    padding: 5px;
+}
+.dui-plr10 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+/*浅黑色*/
+.dui-grep {
+    color: #333;
+}
+/*橙色*/
+.dui-c1 {
+    color: #ff6a00;
+}
+/*绿色*/
+.dui-green {
+    color: #1f9925;
+}
+.dui-zhengchang:after {
+    content: '';
+    background-color: #1f9925;
+    border-radius: 3px;
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    margin-left: 6px;
+    top: 45%;
+}
+/*异常*/
+.dui-red {
+    color: #fa6464;
+}
+.dui-red:after {
+    content: '';
+    background-color: #fa6464;
+    border-radius: 3px;
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    margin-left: 8px;
+    top: 45%;
+}
+/*车源详细*/
+.dui-carno {
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    color: #fff;
+    line-height: 32px;
+}
+.dui-brand-w {}
+.dui-brand-w h2 {
+    height: 20px;
+    overflow: hidden;
+    padding: 0;
+    margin: 0 0 5px;
+    line-height: 20px;
+    font-size: 20px;
+}
+.dui-brand-w .dui-shoucang {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    padding-top: 8px;
+    float: right;
+    border-left: 1px solid #dedede;
+}
+.dui-brand-w .mui-table-view-cell:after {
+    left: 0 !important;
+}
+.dui-price {
+    font-size: 18px;
+    line-height: 25px;
+}
+.dui-yes-icon {
+    position: absolute;
+    left: 10px;
+}
+.dui-lh {
+    line-height: 18px;
+    display: inline-flex;
+}
+.dui-lh i {
+    font-size: 18px;
+    color: green;
+    padding-right: 5px;
+}
+.dui-zhibao {
+    float: left;
+    background: #fcfcfc;
+    padding: 10px 0;
+    font-size: 12px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+.mui-table-view.dui-carinfo-table .mui-table-view-cell {
+    padding: 10px 0;
+    font-size: 12px;
+    background: #fcfcfc;
+}
+.dui-table {
+    margin: 0;
+    padding: 0;
+}
+.dui-table-bottom {
+    padding: 10px 0;
+    font-size: 12px;
+    background: #fcfcfc;
+    float: left;
+    text-align: center;
+    list-style: none;
+    border-bottom: 1px solid #eee;
+}
+.dui-nav-right {
+    margin-top: 0;
+    color: #333;
+}
+.dui-nav-right .dui-icon {
+    font-size: 20px;
+    margin-top: 1px;
+    margin-right: 5px;
+    margin-left: -5px;
+}
+.dui-nav-right:after {
+    font-size: 30px;
+    font-weight: 600;
+    right: 15px;
+    content: '\e583';
+    color: #bbb;
+    font-family: Muiicons;
+    font-size: inherit;
+    line-height: 1;
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+}
+/*检测报告显示*/
+.dui-report-box {
+    background: #fff;
+    padding: 10px;
+}
+.dui-report-box h5 {
+    font-size: 18px;
+    line-height: 30px;
+    margin: 0;
+    padding: 0 5px;
+}
+/*检测报告标题*/
+.dui-content {
+    background-color: #f5f5f5 !important;
+    overflow: hidden;
+}
+.dui-title-w {
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding-left: 0;
+    background-color: #fff;
+}
+.dui-title-w .dui-title-text {
+    height: 45px;
+    background: #ff6a00;
+    width: auto;
+    display: inline-table;
+    position: relative;
+    line-height: 45px;
+    padding: 0 15px;
+    color: #fff;
+    font-size: 18px;
+}
+.dui-title-w .dui-title-right {
+    list-style: none;
+}
+.dui-title-w .dui-title-right:after {
+    font-size: 30px;
+    font-weight: 600;
+    right: 15px;
+    content: '\e581';
+    color: #bbb;
+    font-family: Muiicons;
+    font-size: inherit;
+    line-height: 1;
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+}
+.dui-title-desc {
+    padding: 15px;
+    line-height: 23px;
+    font-size: 14px;
+}
+.dui-img-w {
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+}
+.dui-report-title {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    padding: 0 10px;
+}
+.dui-report-title h5 {
+    font-size: 18px;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+}
+.dui-report-table {}
+.dui-report-table .mui-table-view-cell {
+    background: #f5f5f5 !important;
+    font-size: 14px !important;
+    height: 45px;
+}
+.dui-report-table .dui-cell {
+    font-size: 14px !important;
+    height: 65px !important;
+}
+.report-check-yes {
+    background: url("/images/report-check-icon.png") no-repeat 0 -2px;
+    width: 25px;
+    height: 26px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+}
+.report-check-no {
+    background-position: 0 -43px;
+}
+.report-check-wu {
+    background-position: 50px -79px;
+}
+.dui-col-xs-2 {
+    width: 20% !important;
+    position: relative;
+    min-height: 1px;
+}
+/*车辆安全*/
+.dui-safety {
+    display: inline-table;
+    background-color: #fff;
+    /*margin-bottom: 15px;*/
+}
+.dui-safe-tit-w {
+    display: inline;
+    position: relative;
+    float: left;
+}
+.dui-safe-tit-w .dui-safe-tit-text {
+    width: 40px;
+    float: left;
+    font-size: 45px;
+    vertical-align: top;
+    padding: 0;
+    color: #4d4d4d;
+    text-align: center;
+}
+.dui-safe-tit-w .p1 {
+    margin: 0;
+    padding: 10px 0 0;
+    font-size: 18px;
+    color: #4d4d4d;
+}
+.dui-safe-tit-w .p2 {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #4d4d4d;
+}
+.vehicle-safety-wrap {
+    width: 300px;
+    position: relative;
+    /*display: inline;*/
+    background-color: #fff;
+    margin: 10px auto;
+}
+.vehicle-safety-wrap .treelist-wrap {
+    width: 100%;
+    display: inline-block;
+}
+.treelist-wrap .safety-base-line1 {
+    width: 59px;
+    height: 203px;
+    position: relative;
+    float: left;
+    margin-left: 15px;
+}
+.treelist-wrap .treelist {
+    height: 200px;
+    width: 40px;
+    margin-right: 15px;
+    position: relative;
+    float: left;
+    background-color: #ff6a00;
+}
+.treelist-wrap .treelist1 {
+    height: 200px;
+    width: 35px;
+    margin-right: 10px;
+    position: relative;
+    float: left;
+    background-color: #ff6a00;
+}
+.treelist-wrap .toptoline {
+    width: 100%;
+    background-color: #dfdfdf;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.treelist-wrap .dotline {
+    width: 100%;
+    position: absolute;
+    height: 60%;
+    border-bottom: 1px dotted #626262;
+    top: 0;
+    left: 0;
+}
+.treelist-wrap .dotline1 {
+    width: 100%;
+    position: absolute;
+    height: 22%;
+    border-bottom: 1px dotted #626262;
+    top: 0;
+    left: 0;
+}
+.vehicle-safety-wrap .vehicle-safety-tyre {
+    position: relative;
+    float: left;
+    width: 240px;
+    height: 36px;
+    background-color: #fff;
+    border-top: 1px solid #dedede;
+    padding-top: 5px;
+    margin-left: 60px;
+}
+.vehicle-safety-wrap .vehicle-safety-tyre3 {
+    background: url("/images/vehicle-safety-tyre3.gif") no-repeat top;
+    float: left;
+    width: 100%;
+    height: 36px;
+}
+.vehicle-safety-wrap .safety-title {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    text-align: left;
+}
+.dui-device-li {
+    /*border-top-left-radius: 3px;
+    border-top-right-radius: 3px;*/
+    float: left;
+    height: 70px;
+    font-size: 14px;
+    padding-top: 10px;
+    vertical-align: middle;
+    text-align: left;
+    background-color: #edeeef;
+}
+.dui-device-li h6 {
+    color: #ff6b00;
+    font-size: 45px;
+    display: inline;
+    padding-left: 10px;
+}
+.dui-device-li em {
+    color: #ff6b00;
+    font-size: 18px;
+    padding-left: 10px;
+}
+.dui-device-li .p1 {
+    color: #666;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid #dedede;
+}
+.dui-device-li .p2 {
+    color: #34ae34;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+}
+.dui-tl {
+    text-align: left !important;
+}
+.dui-car-imglist {
+    padding: 0;
+    background: #fff;
+}
+.dui-car-imglist .dui-img-inherit {
+    margin: 5px 0;
+}
+.dui-car-imglist .dui-img-inherit:last-child {
+    margin: 5px 0 0;
+}
+.dui-car-imglist .dui-img-inherit img {
+    width: inherit;
+}
+.car-appariserflag {
+    height: 40px;
+    line-height: 40px;
+    background-repeat: no-repeat;
+    background-size: 45px 40px;
+    font-size: 12px;
+    background-position: center;
+}
+.car-info-caption::before {
+    content: "";
+    display: inline-block;
+    background: #FF6A00;
+    width: 3px;
+    height: 12px;
+    margin-right: 3px;
+}
+.border-top-none {
+    border-top: none !important;
+}
+.mui-table-view-cell>a:not(.mui-btn) {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: -11px -15px;
+    padding: inherit;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: rgb(102, 102, 102);
+}
