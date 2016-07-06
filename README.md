@@ -1,4 +1,4 @@
-# wechat
+# CTXWeChat
 
 二手车交易平台  移动端版本
 
